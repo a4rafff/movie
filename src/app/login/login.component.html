@@ -1,0 +1,34 @@
+
+    
+
+
+<div class="w-75 mx-auto py-3  ">
+
+    <h2 class="d text-info">LogIn</h2>
+
+<form  [formGroup]="form" (ngSubmit)='logIn(form)'  >     
+    <div class="col-md-12 m-5">
+        <input type="email" formControlName="email" class="form-control"  name="email"  placeholder="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'email'">
+        <div  class=" m-3 text-info" *ngIf='form.get("email")?.errors !=null && form.get("email")?.touched'   role="alert">
+            <p class="alert " *ngIf='form.get("email")?.errors?.["required"]' > <i class="fa-solid fa-exclamation mx-2"></i>email is required</p>
+            <p  class="alert " *ngIf='form.get("email")?.errors?.["email"]'> <i class="fa-solid fa-exclamation mx-2"></i>email is invalid</p>
+       
+          </div>
+    </div>
+   
+    <div class="col-md-12 m-5">
+        <input  type="password" formControlName="password" class="form-control"  name="password"  placeholder="password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'password'">
+        <div  class=" m-3 text-info" *ngIf='form.get("password")?.errors !=null && form.get("password")?.touched' role="alert">
+            <p class=" alert " *ngIf='form.get("password")?.errors?.["required"]'  > <i class="fa-solid fa-exclamation mx-2"></i>password is required</p>
+            <p class=" alert " *ngIf='form.get("password")?.errors?.["minlength"]' > <i class="fa-solid fa-exclamation mx-2"></i>password is invalid</p>
+            
+          </div>
+    </div>
+   
+    <div class="d col-md-12 w-50   mb-5">
+        <button [disabled]="form.invalid" type="submit"  class=" btn btn-info  mx-auto ">LogIn</button> 
+        <p class="text-light   mt-3">I have an account  <a class="d-inline"  routerLink="/register"> SignUp</a></p>
+         
+    </div>
+</form>
+</div>

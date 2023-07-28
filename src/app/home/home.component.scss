@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap');
+.bord
+{
+    height: 1px;
+    background-color: gray;
+   
+}
+.Vote
+{
+    background-color: #000000;
+    color: #24baef;
+    padding:2px 2px 9px 5px;
+    border-bottom-left-radius: 30px;
+}
+.scond-color
+{
+    color: #949cb0;
+    font-family:'Montserrat Alternates', 
+}
+h2,h3
+{
+    font-family:'Montserrat Alternates', 
+}
+.hov:hover
+{
+    background-color: #000000;
+    z-index: -111;
+}
+input
+{
+    border-radius: 10px;
+    margin-top: -5px;
+    background-color:transparent;
+    padding: 5px;
+    color: white;
+    border: none;
+    font-size: 25px;
+   
+}
+li
+{
+   
+    padding:5px 10px;
+    margin: 5px;
+    border-radius:10px ;
+}
+.borde
+{
+    border: 1px solid #E2E2EA;
+    padding:5px 10px;
+    margin: 5px;
+    border-radius:10px ;
+}

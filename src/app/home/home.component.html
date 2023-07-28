@@ -1,0 +1,62 @@
+
+
+
+   <div class="container"> 
+   
+        <div class="row text-center">
+            <div class="col-md-12">
+                <input type="text" class="w-50 text-center " [(ngModel)]='firstName' (input)="search()" placeholder="Search....">
+
+            </div>
+        </div>
+       
+         <div class="row">
+                  
+            <div class=" col-md-4 ">
+                <div class="bord my-5 w-50 ">
+                     
+                </div>
+                <h2>popular Movies <br/> To Watch Right Now  </h2>
+                <p class="scond-color">popular Movies To Watch Right Now  </p>
+                <div class="bord my-5 w-50 ">
+                     
+                </div>
+            </div>
+          
+           
+      
+                <div *ngFor="let mov of movie" class=" col-md-2 my-4 ">  
+                 
+                    <div class="movi position-relative">
+                        <div [routerLink]="['/moviedetalis',mov.id]">
+                            <img [src]="moviee+mov.poster_path" class="w-100">
+                            <h3 class="h6 text-center">{{mov.title}}</h3>
+                            <div class="Vote position-absolute top-0 end-0">
+                                     {{mov.vote_average}}
+                            </div>
+                        </div>      
+                    </div>
+              
+            </div>
+          
+         </div>
+         <div class="container pb-2">
+                           
+                                    
+            <nav class="list-unstyled  d-flex justify-content-center align-items-center ">
+                <li class="borde" (click)="prevPage()"><i class="fa-solid fa-angle-left"></i></li>
+                <li (click)="displayUser(1)">1</li>
+                <li (click)="displayUser(2)">2</li>
+                <li (click)="displayUser(3)">3</li>
+                <li (click)="displayUser(4)">4</li>
+                <li (click)="displayUser(5)">5</li>
+                <li (click)="displayUser(6)">6</li>
+                <li class="borde" (click)=" nextPage()"><i class="fa-solid fa-angle-right"></i></li>
+            </nav>
+        
+ 
+  
+
+</div>
+
+   </div>
