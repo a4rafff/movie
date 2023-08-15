@@ -1,10 +1,10 @@
 <div class="container mt-4 ">
     <div class="row">
-        <div class="back col-md-4 ">
-            <img [src]="path+movieDetalis.poster_path" class="w-100 h-75 m-5" >
+        <div class="col-md-4 ">
+            <img [src]="path+movieDetalis.poster_path" class="w-100 h-75 my-5 mx-1" >
         </div>
-        <div class="col-md-6 mx-5 py-5 my-2  ">
-            <h2 class=" p-5 pb-1  px-1 text-light w-100">{{movieDetalis.title}}</h2>
+        <div class="col-md-6 mx-2 py-5  ">
+            <h2 class=" py-2 pb-1  px-1 text-light w-100">{{movieDetalis.title}}</h2>
             <h4 class=" text-left px-1 py-2">{{movieDetalis.tagline}}</h4>
             <div class="row mx-1 my-1 ">
                 <div *ngFor="let type of movieDetalis.genres"  class="type bg-info text-center col-md-3 mb-3 mx-1 ">
@@ -13,15 +13,15 @@
                     </div>
                 </div>
             </div>
-            <p class="mx-2 py-1">Vote : {{movieDetalis.vote_average}}</p>
+            <p class="mx-2 py-1">Vote :{{movieDetalis.vote_average}}</p>
             <p class="mx-2 py-1">Vote count : {{movieDetalis.vote_count}}</p>
             <p class="mx-2 py-1">release_date : {{movieDetalis.release_date}}</p>
-            <a [href]='movieDetalis.homepage' target="_blank"><button class="btn bg-info text-white mx-2"> Watch</button></a>
+            <a [href]='movieDetalis.homepage' target="_blank"><button class="btn bg-info text-white mx-2 my-4 mb-5"> Watch</button></a>
                  
         </div>
        
     </div>
     <div></div>
-    <p class="go mx-5 ">release_date : {{movieDetalis.overview}}</p>
+    <p class="go mx-2 ">release_date : {{movieDetalis.overview}}</p>
 </div>
 
