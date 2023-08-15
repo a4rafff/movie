@@ -4,20 +4,20 @@
     
     <ul class=" list-unstyled d-flex py-3">
         <li class="px-2 py-1" ><i class="logo fa-solid fa-tape" routerLink="home"></i></li>
-        <li *ngIf="islogin" class="px-2 py-4" routerLink="home">Home</li>
-        <li *ngIf="islogin"  class="px-2 py-4" routerLink="trending">Trending</li>
+        <li *ngIf="islogin" class="px-1 py-4" routerLink="home">Home</li>
+        <li *ngIf="islogin"  class="px-1 py-4" routerLink="trending">Trending</li>
         
     </ul>
     <ul class=" list-unstyled d-flex py-3">
         
        
-        <li class="px-2" ><i class="fa-brands fa-facebook"></i></li>
-        <li class="px-2"><i class="fa-brands fa-instagram"></i></li>
-        <li class="px-2"><i class="fa-brands fa-youtube"></i></li>
-        <li class="px-2 me-4"><i class="fa-brands fa-twitter"></i></li>
-        <li *ngIf="!islogin" class="px-2" routerLink="login">login</li>
-        <li *ngIf="!islogin" class="px-2" routerLink="register">Register</li>
-        <li (click)="logOut()" *ngIf="islogin" class="px-2" routerLink="register">logOut</li>
+        <li class="px-1" ><i class="fa-brands fa-facebook"></i></li>
+        <li class="px-1"><i class="fa-brands fa-instagram"></i></li>
+        <li class="px-1"><i class="fa-brands fa-youtube"></i></li>
+        <li class="px-1 me-4"><i class="fa-brands fa-twitter"></i></li>
+        <li *ngIf="!islogin" class="px-1" routerLink="login">login</li>
+        <li *ngIf="!islogin" class="px-1" routerLink="register">Register</li>
+        <li (click)="logOut()" *ngIf="islogin" class="px-1" routerLink="register">logOut</li>
         
        
     </ul>
